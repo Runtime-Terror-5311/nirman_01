@@ -47,6 +47,7 @@ const SearchBar = () => {
             <option>Mumbai</option>
             <option>Delhi</option>
             <option>Kolkata</option>
+            <option>uk</option>
             
             </select>
 
