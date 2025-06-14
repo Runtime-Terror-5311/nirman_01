@@ -1,7 +1,7 @@
 import React from "react";
-import Professionals from "./components/Professionals";
-import PricingPlans from "./components/PricingPlans";
-import Body from "./components/Body";
+import Professionals from "../components/Professionals";
+import PricingPlans from "../components/PricingPlans";
+import Body from "../components/Body";
 
 
 
