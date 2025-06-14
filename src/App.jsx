@@ -5,6 +5,7 @@ import Hire from '../routes/hire';
 import Support from '../routes/support';
 import Home from '../components/Home';
 import Searchbar from '../components/Searchbar';
+import TopServices from '../components/TopServices.jsx'
 function App() {
   return (
     <>
@@ -32,7 +33,14 @@ function App() {
         <Route path="/support/faq" element={<Support type="FAQ" />} />
         <Route path="/support/report" element={<Support type="Report" />} />
       </Routes>
-      <Searchbar/>
+
+      {/* Only show Searchbar on homepage */}
+      {location.pathname === '/' && (
+        <div className="flex justify-center -mt-12">
+          <Searchbar />
+        </div>
+      )}
+      <TopServices/>
 
       {/* Default welcome page (only visible when no specific route is matched) */}
       {/* <div className="flex items-center justify-center min-h-screen bg-blue-100">
