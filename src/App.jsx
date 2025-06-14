@@ -1,15 +1,21 @@
-import { Routes, Route, useLocation } from 'react-router-dom'; // 
-import Navbar from '../components/navbar';
-import Services from '../routes/services';
-import Hire from '../routes/hire';
-import Support from '../routes/support';
+import React from "react";
+import { Routes, Route, useLocation } from 'react-router-dom';
+
+import Navbar from '../components/Navbar';
+import Professionals from '../components/Professionals';
+import PricingPlans from '../components/PricingPlans';
+import Body from '../components/Body';
 import Home from '../components/Home';
 import Searchbar from '../components/Searchbar';
 import TopServices from '../components/TopServices.jsx';
-import Howitworks from '../components/Howitworks.jsx'
+import Howitworks from '../components/Howitworks.jsx';
+
+import Services from '../routes/services';
+import Hire from '../routes/hire';
+import Support from '../routes/support';
 
 function App() {
-  const location = useLocation(); //
+  const location = useLocation();
 
   return (
     <>
@@ -37,15 +43,20 @@ function App() {
         <Route path="/support/report" element={<Support type="Report" />} />
       </Routes>
 
-      {/* Only show Searchbar on homepage */}
+      {/* Show Searchbar only on homepage */}
       {location.pathname === '/' && (
         <div className="flex justify-center -mt-12">
           <Searchbar />
         </div>
       )}
 
+      {/* Extra sections you added */}
+      <Professionals />
+      <PricingPlans />
+      <Body />
+
       <TopServices />
-      <Howitworks/>
+      <Howitworks />
     </>
   );
 }
