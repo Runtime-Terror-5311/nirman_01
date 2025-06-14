@@ -13,7 +13,7 @@ const HeroSection = () => {
       />
 
       {/* ✅ Content above image */}
-      <div className="relative z-10 container mx-auto px-4 w-full">
+      <div id="home" className="relative z-10 container mx-auto px-4 w-full">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Build Your Dream Home with Trusted Experts
@@ -22,10 +22,10 @@ const HeroSection = () => {
             Connecting clients to verified professionals.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="border-2 border-black text-black px-6 py-3 rounded-md font-medium hover:bg-green-700 hover:text-white transition whitespace-nowrap">
+            <button className="bg-green-900 border-2 cursor-pointer border-black text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 hover:text-white transition whitespace-nowrap">
               Start Building
             </button>
-            <button className="border-2 border-black text-black px-6 py-3 rounded-md font-medium hover:bg-black hover:text-white transition whitespace-nowrap">
+            <button className="border-2 cursor-pointer  border-black text-black px-6 py-3 rounded-md font-medium hover:bg-black hover:text-white transition whitespace-nowrap">
               Join as Service Provider
             </button>
           </div>
