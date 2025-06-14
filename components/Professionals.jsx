@@ -29,22 +29,22 @@ const professionals = [
 
 const FeaturedProfessionals = () => {
   return (
-    <div className="w-full py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
+    <div id="professionals" className="w-full py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
         Featured Professionals
       </h2>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto ">
         {professionals.map((pro, idx) => (
           <div
             key={idx}
-            className="bg-white shadow-lg rounded-xl p-6 text-center flex flex-col items-center space-y-4"
+            className="bg-white shadow-lg rounded-xl transition-transform hover:scale-110 p-6 text-center flex flex-col items-center space-y-4"
           >
             <img
               src={pro.image}
               alt={pro.name}
               className="w-20 h-20 rounded-full object-cover"
             />
-            <div>
+            <div >
               <h3 className="text-xl font-bold text-gray-900">{pro.name}</h3>
               <p className="text-teal-600 font-medium">{pro.role}</p>
               <div className="flex items-center justify-center space-x-1 mt-2 text-yellow-500">
@@ -56,7 +56,7 @@ const FeaturedProfessionals = () => {
               </div>
             </div>
             <p className="text-sm text-gray-600">{pro.description}</p>
-            <button className="mt-auto bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded">
+            <button className="mt-auto cursor-pointer bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded">
               Hire Now
             </button>
           </div>

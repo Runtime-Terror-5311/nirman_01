@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route, useLocation } from 'react-router-dom';
-
+import Getstarted from '../components/Getstarted.jsx';
+import Footer from '../components/Footer.jsx';
+import Founders from '../components/Founders.jsx';
 import Navbar from '../components/Navbar';
 import Professionals from '../components/Professionals';
 import PricingPlans from '../components/PricingPlans';
@@ -51,12 +53,16 @@ function App() {
       )}
 
       {/* Extra sections you added */}
+      <TopServices />
       <Professionals />
       <PricingPlans />
       <Body />
 
-      <TopServices />
+      
       <Howitworks />
+      <Getstarted/>
+      <Founders/>
+      <Footer/>
     </>
   );
 }

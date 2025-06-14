@@ -17,7 +17,7 @@ const TopServices = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-50 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center space-y-2">
-            <div className="bg-teal-100 rounded-full p-6 sm:p-6 md:p-7 lg:p-8 flex items-center justify-center transition-transform hover:scale-110">
+            <div className="bg-teal-100 rounded-full p-6 sm:p-6 md:p-7 lg:p-8 flex items-center justify-center transition-transform hover:scale-110 cursor-pointer">
               {/* Responsive Icon size */}
               <div className="text-teal-600 text-3xl sm:text-4xl md:text-5xl">
                 {service.icon}

@@ -20,7 +20,7 @@ const SearchBar = () => {
           <select
             value={serviceType}
             onChange={(e) => setServiceType(e.target.value)}
-            className="w-full border border-blue-400 rounded-xl pl-10 pr-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full border cursor-pointer border-blue-400 rounded-xl pl-10 pr-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           >
             <option>Build</option>
             <option>Repair</option>
@@ -34,7 +34,7 @@ const SearchBar = () => {
           <select
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            className="w-full border border-blue-400 rounded-xl pl-10 pr-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full border cursor-pointer border-blue-400 rounded-xl pl-10 pr-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           >
             <option>Jamshedpur</option>
             <option>Ranchi</option>
@@ -43,13 +43,14 @@ const SearchBar = () => {
             <option>Delhi</option>
             <option>Kolkata</option>
             <option>Dehradun</option>
+            <option>Motihari</option>
           </select>
         </div>
 
         {/* Search Button */}
         <button
           onClick={handleSearch}
-          className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-xl flex items-center space-x-2 transition"
+          className="bg-teal-700 cursor-pointer hover:bg-teal-800 text-white px-6 py-3 rounded-xl flex items-center space-x-2 transition"
         >
           <FaSearch />
           <span className="font-semibold">Search</span>
