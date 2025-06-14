@@ -1,10 +1,23 @@
+import React from "react";
+import PricingPlans from "./components/PricingPlans";
+import Body from "./components/Body";
+
+
+
 function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-100">
-      <div className="bg-white p-8 rounded-xl shadow-xl text-center">
-        <h1 className="text-3xl font-bold text-blue-600 mb-4">Welcome to Nirmaan</h1>
-        <p className="text-gray-700">Connecting contractors and users to build better together.</p>
-      </div>
+    <div className="flex flex-col items-center min-h-screen bg-white py-12 space-y-10">
+      {/* Welcome Section */}
+
+      
+      {/* Pricing Plans Section */}
+      <PricingPlans />
+
+      {/* Body Section */}
+      <Body />
+
+
+     
     </div>
   );
 }
