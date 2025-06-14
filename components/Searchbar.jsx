@@ -16,7 +16,7 @@ const SearchBar = () => {
 
         {/* Service Dropdown */}
         <div className="relative w-full max-w-xs">
-          <FaBuilding className="absolute top-1/2 left-3 transform -translate-y-1/2 text-teal-6" />
+          <FaBuilding className="absolute top-1/2 left-3 transform -translate-y-1/2 text-teal-600" />
           <select
             value={serviceType}
             onChange={(e) => setServiceType(e.target.value)}

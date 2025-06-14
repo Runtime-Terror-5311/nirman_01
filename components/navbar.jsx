@@ -45,9 +45,9 @@ const Navbar = () => {
     <nav className="flex justify-between items-center px-8 py-4 shadow-md bg-white relative">
       {/* Logo */}
       <img
-        src="/nirmaanblklogo.ico"
+        src="/logo2.png"
         alt="Logo"
-        className="h-20 md:h-20 lg:h-12 w-auto object-fill"
+        className="h-24 md:h-20 lg:h-12 w-auto object-fill"
       />
 
       {/* Nav Links */}

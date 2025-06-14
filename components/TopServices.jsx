@@ -14,7 +14,7 @@ const TopServices = () => {
       <h2 className="text-center text-2xl font-bold text-gray-800 mb-10">Top Services</h2>
       
       {/* Responsive flex layout */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-50 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center space-y-2">
             <div className="bg-teal-100 rounded-full p-6 sm:p-6 md:p-7 lg:p-8 flex items-center justify-center transition-transform hover:scale-110">
