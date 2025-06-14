@@ -1,8 +1,8 @@
-import nanda from "../assets/nanda.jpg";
-import shubhangi from "../assets/shubhangi.jpg";
-import yuvraj from "../assets/yuvraj.jpg";
-import shristi from "../assets/shristi.jpg";
-import aditya from "../assets/aditya.png";
+import nanda from "/src/assets/nanda.jpg";
+import shubhangi from "/src/assets/shubhangi.jpg";
+import yuvraj from "/src/assets/yuvraj.jpg";
+import shristi from "/src/assets/shristi.jpg";
+import aditya from "/src/assets/aditya.png";
 
 
 export default function Founders() {
