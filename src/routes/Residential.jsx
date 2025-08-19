@@ -1,5 +1,6 @@
 import React from "react";
-import { Home, Building2 } from "lucide-react"; // nice icons
+import { Home, Building2 } from "lucide-react"; 
+import { Link } from "react-router-dom";
 
 const Residential = () => {
   return (
@@ -26,24 +27,30 @@ const Residential = () => {
       {/* Services Grid */}
       <div className="max-w-6xl mx-auto px-6 pb-16 grid md:grid-cols-2 gap-8">
         {/* Modern Homes */}
-        <div className="bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-8 flex flex-col items-center text-center">
+        <Link
+          to="/services/construction/residential/modern-homes"
+          className="bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-8 flex flex-col items-center text-center"
+        >
           <Home className="w-14 h-14 text-indigo-600 mb-4" />
           <h2 className="text-2xl font-semibold mb-3">Modern Homes</h2>
           <p className="text-gray-600">
             Design and build homes with contemporary architecture and energy
             efficiency.
           </p>
-        </div>
+        </Link>
 
         {/* Luxury Villas */}
-        <div className="bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-8 flex flex-col items-center text-center">
+        <Link
+          to="/services/construction/residential/luxury-villas"
+          className="bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-8 flex flex-col items-center text-center"
+        >
           <Building2 className="w-14 h-14 text-indigo-600 mb-4" />
           <h2 className="text-2xl font-semibold mb-3">Luxury Villas</h2>
           <p className="text-gray-600">
             Elegant, premium constructions with cutting-edge interior designs
             and facilities.
           </p>
-        </div>
+        </Link>
       </div>
     </div>
   );

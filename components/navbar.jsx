@@ -102,11 +102,16 @@ const Navbar = () => {
           </button>
           {isHireOpen && (
             <ul className="absolute top-full mt-2 bg-white/90 shadow-xl rounded-lg py-2 w-56 z-20">
-              <li><RouterLink to="/hire/architects" className={dropdownItemClass}>Architects</RouterLink></li>
-              <li><RouterLink to="/hire/contractors" className={dropdownItemClass}>Contractors</RouterLink></li>
+             {/* //<li><RouterLink to="/hire/architects" className={dropdownItemClass}>Architects</RouterLink></li> */}
+              {/* <li><RouterLink to="/hire/contractors" className={dropdownItemClass}>Contractors</RouterLink></li> */}
               <li><RouterLink to="/hire/plumbers" className={dropdownItemClass}>Plumbers</RouterLink></li>
               <li><RouterLink to="/hire/carpenters" className={dropdownItemClass}>Carpenters</RouterLink></li>
               <li><RouterLink to="/hire/labour" className={dropdownItemClass}>Labour</RouterLink></li>
+              <li><RouterLink to="/hire/Interior" className={dropdownItemClass}>Interior</RouterLink></li>
+              <li><RouterLink to="/hire/Contractors" className={dropdownItemClass}>Contractors</RouterLink></li>
+              <li><RouterLink to="/hire/Architects" className={dropdownItemClass}>Architects</RouterLink></li>
+
+
             </ul>
           )}
         </li>

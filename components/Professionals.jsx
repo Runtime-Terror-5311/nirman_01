@@ -28,6 +28,11 @@ const professionals = [
 ];
 
 const FeaturedProfessionals = () => {
+  // Function for handling click
+  const handleHire = (name, role) => {
+    alert(`You have successfully requested to hire ${name} (${role}). Our team will contact you shortly!`);
+  };
+
   return (
     <div id="professionals" className="w-full py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
@@ -44,7 +49,7 @@ const FeaturedProfessionals = () => {
               alt={pro.name}
               className="w-20 h-20 rounded-full object-cover"
             />
-            <div >
+            <div>
               <h3 className="text-xl font-bold text-gray-900">{pro.name}</h3>
               <p className="text-teal-600 font-medium">{pro.role}</p>
               <div className="flex items-center justify-center space-x-1 mt-2 text-yellow-500">
@@ -56,7 +61,12 @@ const FeaturedProfessionals = () => {
               </div>
             </div>
             <p className="text-sm text-gray-600">{pro.description}</p>
-            <button className="mt-auto cursor-pointer bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded">
+            
+            {/* Hire Button */}
+            <button
+              onClick={() => handleHire(pro.name, pro.role)}
+              className="mt-auto cursor-pointer bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded"
+            >
               Hire Now
             </button>
           </div>
