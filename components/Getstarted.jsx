@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 export default function GetStarted() {
+   const Navigate = useNavigate();
   return (
     <div className="bg-[#173766] py-24 text-white text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -8,10 +10,14 @@ export default function GetStarted() {
         Join thousands of satisfied customers who  have transformed <br/> their homes with NIRMAAN.
       </p>
       <div className="flex justify-center gap-4">
-        <button className="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 cursor-pointer shadow-md">
+        <button 
+            onClick={()=>Navigate("/start-building")}
+            className="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 cursor-pointer shadow-md">
           Get Started Today
         </button>
-        <button className="bg-transparent border-2 border-white hover:bg-white hover:text-[#173766] text-white font-medium py-3 px-6 rounded-lg transition duration-300 cursor-pointer">
+        <button
+        onClick={()=>Navigate("/Learn")}
+         className="bg-transparent border-2 border-white hover:bg-white hover:text-[#173766] text-white font-medium py-3 px-6 rounded-lg transition duration-300 cursor-pointer">
           Learn More
         </button>
       </div>

@@ -38,11 +38,15 @@ import Architects from "./routes/Architects.jsx";
 import ModernHomes from "./routes/ModernHomes.jsx";
 import LuxuryVillas from "./routes/LuxuryVillas.jsx";
 
-// Hire Pages
-import Hire from "../routes/hire";
-
 // Support
-import Support from "../routes/support";
+import Support from "./routes/Support.jsx"; 
+import StartBuilding from "./routes/StartBuilding";
+import Join from "./routes/Join.jsx";
+import LearnMore from "./routes/Learnmore.jsx";
+import Checkout from "./routes/Checkout.jsx";
+import Confirmation from "./routes/Confirmation.jsx";
+import Login from "./routes/Login.jsx";
+import Signup from "./routes/Signup.jsx";
 
 function App() {
   const location = useLocation();
@@ -78,7 +82,7 @@ function App() {
         <Route path="/services/construction/residential/modern-homes" element={<ModernHomes />} />
         <Route path="/services/construction/residential/luxury-villas" element={<LuxuryVillas />} />
 
-        {/* Hire Routes (TopServices links go here) */}
+        {/* Hire Routes */}
         <Route path="/hire/architects" element={<Architects />} />
         <Route path="/hire/contractors" element={<Contractors />} />
         <Route path="/hire/plumbers" element={<Plumbing />} />
@@ -89,8 +93,21 @@ function App() {
 
         {/* Support */}
         <Route path="/support/contact" element={<Support type="Contact" />} />
-        <Route path="/support/faq" element={<Support type="FAQ" />} />
-        <Route path="/support/report" element={<Support type="Report" />} />
+<Route path="/support/faq" element={<Support type="FAQ" />} />
+<Route path="/support/report" element={<Support type="Report" />} />
+
+
+        {/* Extra Pages */}
+        <Route path="/start-building" element={<StartBuilding />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/learn" element={<LearnMore />} />
+        <Route path="/checkout/:planName" element={<Checkout />} />  
+         
+<Route path="/confirm" element={<Confirmation />} />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+
       </Routes>
 
       {/* Homepage sections only on "/" */}

@@ -1,3 +1,6 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
 const plans = [
   {
     name: "Gold",
@@ -6,10 +9,10 @@ const plans = [
     features: [
       "Access to basic professionals",
       "24/7 customer support",
-      "Up to 3 service requests/month"
+      "Up to 3 service requests/month",
     ],
     missing: ["Priority scheduling", "Dedicated project manager"],
-    bg: "rgb(244, 242, 242)"
+    bg: "rgb(244, 242, 242)",
   },
   {
     name: "Skilled",
@@ -19,11 +22,11 @@ const plans = [
       "Access to all professionals",
       "24/7 priority customer support",
       "Up to 8 service requests/month",
-      "Priority scheduling"
+      "Priority scheduling",
     ],
     missing: ["Dedicated project manager"],
     popular: true,
-    bg: "rgb(240, 238, 238)"
+    bg: "rgb(240, 238, 238)",
   },
   {
     name: "Pro",
@@ -34,20 +37,25 @@ const plans = [
       "24/7 VIP customer support",
       "Unlimited service requests",
       "Priority scheduling",
-      "Dedicated project manager"
+      "Dedicated project manager",
     ],
     missing: [],
-    bg: "rgb(240, 238, 238)"
-  }
+    bg: "rgb(240, 238, 238)",
+  },
 ];
 
 export default function PricingPlans() {
+  const navigate = useNavigate();
+
   return (
     <div id="pricing" className="w-full bg-white py-12 px-4">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900">Simple, Transparent Pricing</h2>
+        <h2 className="text-4xl font-bold text-gray-900">
+          Simple, Transparent Pricing
+        </h2>
         <p className="mt-2 text-lg text-gray-600">
-          Choose the right plan that fits your construction needs. All plans include access to our verified professionals.
+          Choose the right plan that fits your construction needs. All plans
+          include access to our verified professionals.
         </p>
       </div>
 
@@ -60,7 +68,7 @@ export default function PricingPlans() {
               key={index}
               style={{ backgroundColor: plan.bg }}
               className={`
-                border rounded-xl p-6 flex flex-col justify-between shadow-md transition-all duration-300  hover:scale-110
+                border rounded-xl p-6 flex flex-col justify-between shadow-md transition-all duration-300 hover:scale-110
                 ${plan.popular ? "border-teal-700 ring-2 ring-teal-700" : ""}
                 ${isEdge ? "hover:border-teal-600 hover:shadow-lg" : ""}
               `}
@@ -72,22 +80,34 @@ export default function PricingPlans() {
               )}
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900">{plan.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {plan.name}
+                </h3>
                 <p className="text-2xl font-bold mt-2">
-                  ₹{plan.price}<span className="text-base font-medium">/month</span>
+                  ₹{plan.price}
+                  <span className="text-base font-medium">/month</span>
                 </p>
-                <p className="text-sm text-gray-700 mt-2 mb-4">{plan.description}</p>
+                <p className="text-sm text-gray-700 mt-2 mb-4">
+                  {plan.description}
+                </p>
                 <ul className="space-y-2 text-sm">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700">✔ {feature}</li>
+                    <li key={idx} className="text-gray-700">
+                      ✔ {feature}
+                    </li>
                   ))}
                   {plan.missing.map((item, idx) => (
-                    <li key={idx} className="text-gray-500 line-through">✘ {item}</li>
+                    <li key={idx} className="text-gray-500 line-through">
+                      ✘ {item}
+                    </li>
                   ))}
                 </ul>
               </div>
 
-              <button className="mt-6 bg-teal-700 hover:bg-teal-800 text-white font-semibold py-2 px-4 rounded transition-colors cursor-pointer">
+              <button
+                onClick={() => navigate(`/checkout/${plan.name}`)}
+                className="mt-6 bg-teal-700 hover:bg-teal-800 text-white font-semibold py-2 px-4 rounded transition-colors cursor-pointer"
+              >
                 Get Started
               </button>
             </div>

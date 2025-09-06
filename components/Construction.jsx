@@ -4,7 +4,7 @@ import { FaHome, FaBuilding, FaTools, FaPaintRoller, FaCogs } from "react-icons/
 
 const Construction = () => {
   return (
-    <section className="px-8 py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section className="px-8 py-16 bg-gradient-to-b from-gray-50 to-white mt-20">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto">
         <h1 className="text-5xl font-extrabold text-gray-800">

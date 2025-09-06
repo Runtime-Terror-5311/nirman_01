@@ -1,8 +1,11 @@
 import React from "react";
 import DotGrid from "./DotGrid"; // Adjust path if needed
 import SplitText from "./SplitText"; // Add correct path to your SplitText component
+import { useNavigate } from "react-router-dom";
 
+//  const navigate = useNavigate();
 const HeroSection = () => {
+   const navigate = useNavigate();
   return (
     <section className="relative w-full h-screen flex items-center bg-cover bg-center overflow-hidden">
       
@@ -49,10 +52,12 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-green-900 border-2 cursor-pointer border-black text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 hover:text-white transition whitespace-nowrap">
+            <button
+             onClick={() => navigate("/start-building")} className="bg-green-900 border-2 cursor-pointer border-black text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 hover:text-white transition whitespace-nowrap">
               Start Building
             </button>
-            <button className="border-2 cursor-pointer border-black text-black px-6 py-3 rounded-md font-medium hover:bg-black hover:text-white transition whitespace-nowrap">
+            <button
+            onClick={()=> navigate("/Join")} className="border-2 cursor-pointer border-black text-black px-6 py-3 rounded-md font-medium hover:bg-black hover:text-white transition whitespace-nowrap">
               Join as Service Provider
             </button>
           </div>
